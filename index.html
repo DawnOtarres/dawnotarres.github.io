@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,11 +10,31 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background: #333;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
             text-align: center;
+            cursor: pointer;
+        }
+        .sidebar a:hover {
+            background: #575757;
         }
         .container {
+            margin-left: 220px;
             max-width: 800px;
-            margin: 50px auto;
+            margin-top: 50px;
             background: white;
             padding: 20px;
             border-radius: 10px;
@@ -26,12 +46,48 @@
         p {
             color: #555;
         }
+        .content {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
     </style>
+    <script>
+        function showContent(sectionId) {
+            document.querySelectorAll('.content').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </head>
 <body>
+    <div class="sidebar">
+        <a onclick="showContent('art')">Art</a>
+        <a onclick="showContent('writing')">Writing</a>
+        <a onclick="showContent('about')">About Me</a>
+        <a onclick="showContent('bloodheart')">BloodHeart</a>
+    </div>
     <div class="container">
-        <h1>About Me</h1>
-        <p>Hello! My name is [Your Name]. I am passionate about [your interests or profession]. In my free time, I enjoy [hobbies or activities]. Welcome to my page!</p>
+        <div id="about" class="content active">
+            <h1>About Me</h1>
+            <p>Hello! My name is [Your Name]. I am passionate about [your interests or profession]. In my free time, I enjoy [hobbies or activities]. Welcome to my page!</p>
+        </div>
+        <div id="art" class="content">
+            <h1>Art</h1>
+            <p>Content about art goes here.</p>
+        </div>
+        <div id="writing" class="content">
+            <h1>Writing</h1>
+            <p>Content about writing goes here.</p>
+        </div>
+        <div id="bloodheart" class="content">
+            <h1>BloodHeart</h1>
+            <a class="link" href="https://www.youtube.com/@RedCandleStudios" target="_blank">Visit BloodHeart on YouTube</a>
+            <p>In a town where people have begun to disappear without a trace, a young girl's best friend goes missing, and she must work with her friend's enemy to figure out what the heck is going on. But between investigating a murder from 20 years ago, and falling in love, they find themselves disturbed on what they'll find.</p>
+            <h1>Staff</h1>
+        </div>
     </div>
 </body>
 </html>
