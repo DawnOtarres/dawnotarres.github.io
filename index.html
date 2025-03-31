@@ -3,54 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Dawn Otares</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-        }
-        .sidebar {
-            width: 200px;
-            background: #333;
-            color: white;
-            height: 100vh;
-            padding-top: 20px;
-            position: fixed;
-        }
-        .sidebar a {
-            display: block;
-            color: white;
-            padding: 10px;
-            text-decoration: none;
+            background-color: #F3D9E5;
             text-align: center;
-            cursor: pointer;
         }
-        .sidebar a:hover {
-            background: #575757;
+        .navbar {
+            width: 100%;
+            background: #DE638A;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: #DE638A;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .navbar a:hover {
+            background: #F7B9C4;
         }
         .container {
-            margin-left: 220px;
+            margin-top: 80px;
             max-width: 800px;
-            margin-top: 50px;
             background: white;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            border: 5px solid #ffffff;
         }
         h1 {
-            color: #333;
+            color: #4A3267;
         }
         p {
             color: #555;
+            font-size: 18px;
         }
         .content {
             display: none;
         }
         .active {
             display: block;
+        }
+        .cute-border {
+            border: 3px dashed #F7B9C4;
+            padding: 15px;
+            border-radius: 15px;
+            background: #F3D9E5;
+        }
+        .accent {
+            color: #DE638A;
+            font-weight: bold;
         }
     </style>
     <script>
@@ -63,30 +84,65 @@
     </script>
 </head>
 <body>
-    <div class="sidebar">
+    <div class="navbar">
+        <a onclick="showContent('home')">Home</a>
         <a onclick="showContent('art')">Art</a>
         <a onclick="showContent('writing')">Writing</a>
         <a onclick="showContent('about')">About Me</a>
         <a onclick="showContent('bloodheart')">BloodHeart</a>
     </div>
     <div class="container">
-        <div id="about" class="content active">
-            <h1>About Me</h1>
-            <p>Hello! My name is [Your Name]. I am passionate about [your interests or profession]. In my free time, I enjoy [hobbies or activities]. Welcome to my page!</p>
+        <div id="home" class="content active cute-border">
+            <h1 class="accent">Dawn Otares</h1>
+            <p>This is the homepage. Welcome!</p>
+            <a class="link" href="https://www.youtube.com/@sporadic_drama" target="_blank">My Youtube Channel</a>
+
         </div>
-        <div id="art" class="content">
-            <h1>Art</h1>
-            <p>Content about art goes here.</p>
+        <div id="about" class="content cute-border">
+            <h1 class="accent">About Me</h1>
+            <p>Aurora, Also known as Dawn Otarres, a young artists who aspires to go to art school and study the animation industry. Aurora since a very young age has always been intriuged by the horror genre and the arts, all starting with a simple doodle in her family's apartment wall. She is currently writing a horror book, and working with her co-creator Bruna, to make an animated horror series. </p>
         </div>
-        <div id="writing" class="content">
-            <h1>Writing</h1>
+        <div id="art" class="content cute-border">
+            <h1 class="accent">Art</h1>
+            <p>Below will be a showcase of my art from the past year or so. order: art, media used/aplication, name, time, date</p>
+            <img src="images/MagicGirl.jpg" alt="MagicGirl" width="600">
+            <p> Ipad, IbisXPaint, Magic Wand, 3 hours, 2/2025</p>
+            <img src="images/showgirl.jpg" alt="Showgirl Image" width="600">
+            <p> drawing tablet, Krita, Show Girl, 2 hours, 2/2025</p>
+            <img src="images/Girl.png" alt="Girl Image" width="600">
+            <p> Phone, IbisXPaint, UNAMED, 2 hours, 11/2024</p>
+
+
+
+
+        </div>
+        <div id="writing" class="content cute-border">
+            <h1 class="accent">Writing</h1>
             <p>Content about writing goes here.</p>
         </div>
-        <div id="bloodheart" class="content">
-            <h1>BloodHeart</h1>
-            <a class="link" href="https://www.youtube.com/@RedCandleStudios" target="_blank">Visit BloodHeart on YouTube</a>
+        <div id="bloodheart" class="content cute-border">
+            <h1 class="accent">BloodHeart</h1>
+            <a class="link" href="http://www.youtube.com/@RedCandleStudios" target="_blank">Visit BloodHeart on YouTube</a>
             <p>In a town where people have begun to disappear without a trace, a young girl's best friend goes missing, and she must work with her friend's enemy to figure out what the heck is going on. But between investigating a murder from 20 years ago, and falling in love, they find themselves disturbed on what they'll find.</p>
-            <h1>Staff</h1>
+            <h1 class="accent">Staff</h1>
+            <h2>Creators</h2>
+            <p>Dawn and Bruna</p>
+            <h2>Cast</h2>
+            <p>Miyu → Rosu<br>
+               Kien → Marisa<br>
+               Ashley → Ashe<br>
+               Caitlyn → Evie<br>
+               Zach → Rac.E</p>
+            <h2>Music Composers</h2>
+            <p>Kai<br>
+               Milki</p>
+            <h2>Concept Artists</h2>
+            <p>Harver<br>
+               Lisa<br>
+               Mallodie</p>
+            <h2>Marketing Team</h2>
+            <p>Zay<br>
+               Cosmia</p>
         </div>
     </div>
 </body>
